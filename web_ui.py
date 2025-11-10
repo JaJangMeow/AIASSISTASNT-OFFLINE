@@ -31,5 +31,6 @@ def query():
 
 
 if __name__ == '__main__':
-    port = int(os.getenv('WEB_UI_PORT', 7860))
-    app.run(host='0.0.0.0', port=port)
+    port = int(os.getenv('PORT', 5000))  # Vercel uses PORT
+    app.run(host='0.0.0.0', port=port, debug=False)
+
